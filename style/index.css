@@ -1,0 +1,141 @@
+@font-face {
+    font-family: 'Quintessential-Regular';
+    src: url('font/Quintessential-Regular.ttf');
+}
+@font-face {
+    font-family: 'NotoMono-Regular';
+    src: url('font/NotoMono-Regular.ttf');
+}
+
+body{
+
+}
+
+/* menu burger */
+
+.menu {
+	display: none;
+	flex-basis: 100%;
+	list-style: none;
+}
+
+.menu-checkbox:checked ~ .menu {
+	display: block;
+}
+
+.menu-checkbox {
+	opacity: 0;
+	position: absolute;
+	top: -1000px;
+}
+
+.menu-checkbox:focus + .menu-toggle {
+	outline: #00A1A1 auto 5px;
+}
+
+.menu-toggle {
+	padding: .5em 1em;
+}
+
+.nav-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.menu a{
+	color: #576D2E;
+	font-size: 1.5rem;
+}
+
+/* fin menu burger */
+
+nav{
+
+}
+/*
+nav ul{
+	display:flex;
+	flex-direction: column;
+
+	width:90%;
+    text-align: left
+	}
+
+.menu a{
+	color: #576D2E;
+	font-size: 1.5rem;
+}
+
+.menu a:hover{
+    color: #AFAFAF;
+}
+
+.menu li{
+    width: 45%;
+    text-decoration: none;
+}
+
+*/
+/* diaporama */
+
+.conteneur{
+	max-width: 576px;
+	margin: 50px auto;
+}
+
+.diaporama{
+	width: 100%;
+	height: 0;
+	padding-top: 75%;
+	box-shadow: 0 15px 10px -5px #777;
+	background-color: #ededed;
+	background-size: contain;
+	animation: fondu 15s ease-in-out infinite both;
+}
+
+.diaporama:hover{
+	animation-play-state: paused;
+}
+
+@keyframes fondu {
+	0%{background-image: url("../img/img1.webp");}
+	25%{background-image: url("../img/img2.webp");}
+	50%{background-image: url("../img/img3.webp");}
+	75%{background-image: url("../img/img4.webp");}
+	100%{background-image: url("../img/img1.webp");}
+}
+/* fin diaporama */
+
+footer{
+
+}
+
+/*  -----------------  pour les écrans moyens de 768px tablette  -------------*/
+/* -------------------------------------------------------------------------------*/
+
+@media screen and (min-width: 768px) {
+
+	.menu-toggle,
+	.menu-checkbox {
+		display: none;
+	}
+
+	.menu {
+		display: block;
+		flex-basis: auto;
+		margin: 1em;
+		padding: 0;
+	}
+	.menu li {
+		display: inline-block;
+		margin: 1em;
+	}
+	.nav-wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-wrap: nowrap;
+	}
+}
