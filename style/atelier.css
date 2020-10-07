@@ -1,0 +1,211 @@
+@font-face {
+    font-family: 'ModernSans-Light';
+    src: url('../font/ModernSans-Light.otf') format('opentype'),
+    url('../font/ModernSans-Light.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Louis George Cafe';
+    src: url('../font/Louis George Cafe.ttf') format('truetype'),
+    url('../font/Louis George Cafe Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body{
+    min-width: 460px;
+    max-width: 100%;
+    height: 100%;
+    margin: auto;
+    background-color: #999;
+}
+.atelier{
+    background-image: url('../img/atelier.webp');
+    max-width: 800px;
+    padding: 5vh 10vw;
+    margin: 50px 50px;
+    text-align: center;
+}
+/* menu burger */
+h1{
+    font-family: 'ModernSans-Light';
+    font-size: 2em;
+    color: #576D2E;
+    margin:0 0.5em ;
+}
+h1 span{
+    color: #CCC;
+}
+.menu {
+    display: none;
+    flex-basis: 100%;
+    list-style: none;
+    text-decoration: none;
+}
+.nav-wrapper a{
+    text-decoration: none;
+}
+
+.menu-checkbox:checked ~ .menu {
+    display: block;
+}
+
+.menu-checkbox {
+    opacity: 0;
+    position: absolute;
+    top: -1000px;
+}
+
+.menu-checkbox:focus + .menu-toggle {
+    outline: #00A1A1 auto 5px;
+}
+
+.menu-toggle {
+    padding: 2em 1em;
+}
+
+.nav-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.menu a{
+    color: #576D2E;
+    font-size: 1.5rem;
+}
+
+/* fin menu burger */
+
+nav{
+
+}
+
+/* diaporama */
+
+.conteneur{
+    max-width: 250px;
+    margin: 50px auto;
+    border: solid black 3px;
+}
+
+.diaporama{
+    width: 100%;
+    height: 0;
+    padding-top: 75%;
+    background-color: #ededed;
+    background-size: contain;
+    animation: accueil 15s ease-in-out infinite both;
+}
+
+.diaporama:hover{
+    animation-play-state: paused;
+}
+
+@keyframes accueil {
+    0%{background-image: url("../img/atelier01.webp");}
+    25%{background-image: url("../img/atelier02.webp");}
+    50%{background-image: url("../img/atelier03.webp");}
+    75%{background-image: url("../img/atelier04.webp");}
+    100%{background-image: url("../img/atelier05.webp");}
+}
+/* fin diaporama */
+
+footer{
+    border-top: solid #555 1px ;
+    text-align: center;
+    margin-top: auto;
+}
+
+/*  -----------------  pour les écrans moyens de 768px tablette  -------------*/
+/* -------------------------------------------------------------------------------*/
+
+@media screen and (min-width: 768px) {
+
+    .atelier{
+        max-width: 800px;
+        margin: 50px auto;
+    }
+
+    .menu-toggle,
+    .menu-checkbox {
+        display: none;
+    }
+
+    .menu {
+        display: block;
+        flex-basis: auto;
+        margin: 1em;
+        padding: 0;
+    }
+    .menu li {
+        display: inline-block;
+        margin: 1em;
+    }
+    .nav-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+    }
+
+    /* diaporama */
+
+    .conteneur{
+        max-width: 500px;
+        margin: 50px auto;
+    }
+
+}
+
+
+
+/*  -----------------  pour les écrans moyens de 1200px ordinateur  -------------*/
+/* -------------------------------------------------------------------------------*/
+
+@media screen and (min-width: 1200px) {
+
+    body{
+        width: 80%;
+    }
+
+    .atelier{
+        max-width: 1200px;
+        padding: 10vh 10vw;
+        margin: 10vh 5vw ;
+    }
+
+    .menu-toggle,
+    .menu-checkbox {
+        display: none;
+    }
+
+    .menu {
+        display: block;
+        flex-basis: auto;
+        margin: 1em;
+        padding: 0;
+    }
+    .menu li {
+        display: inline-block;
+        margin: 1em;
+    }
+    .nav-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+    }
+
+    /* diaporama */
+
+    .conteneur{
+        max-width: 500px;
+        margin: 50px auto;
+    }
+
+}
+

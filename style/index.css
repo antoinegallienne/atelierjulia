@@ -37,6 +37,10 @@ h1 span{
 	display: none;
 	flex-basis: 100%;
 	list-style: none;
+	text-decoration: none;
+}
+.nav-wrapper a{
+	text-decoration: none;
 }
 
 .menu-checkbox:checked ~ .menu {
@@ -89,14 +93,14 @@ nav{
 	box-shadow: 0 15px 10px -5px #777;
 	background-color: #ededed;
 	background-size: contain;
-	animation: fondu 15s ease-in-out infinite both;
+	animation: accueil 15s ease-in-out infinite both;
 }
 
 .diaporama:hover{
 	animation-play-state: paused;
 }
 
-@keyframes fondu {
+@keyframes accueil {
 	0%{background-image: url("../img/img1.webp");}
 	25%{background-image: url("../img/img2.webp");}
 	50%{background-image: url("../img/img3.webp");}
@@ -115,6 +119,48 @@ footer{
 /* -------------------------------------------------------------------------------*/
 
 @media screen and (min-width: 768px) {
+
+	.menu-toggle,
+	.menu-checkbox {
+		display: none;
+	}
+
+	.menu {
+		display: block;
+		flex-basis: auto;
+		margin: 1em;
+		padding: 0;
+	}
+	.menu li {
+		display: inline-block;
+		margin: 1em;
+	}
+	.nav-wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-wrap: nowrap;
+	}
+
+	/* diaporama */
+
+	.conteneur{
+		max-width: 800px;
+		margin: 50px auto;
+	}
+
+}
+
+
+
+/*  -----------------  pour les écrans moyens de 1200px ordinateur  -------------*/
+/* -------------------------------------------------------------------------------*/
+
+@media screen and (min-width: 1200px) {
+
+	body{
+		width: 80%;
+	}
 
 	.menu-toggle,
 	.menu-checkbox {
