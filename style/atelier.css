@@ -21,11 +21,9 @@ body{
     margin: auto;
     background-color: #AAA;
 }
-.atelier{
-    background-image: url('../img/atelier.webp');
-    max-width: 800px;
-    padding: 5vh 10vw;
-    text-align: center;
+
+.main-navigation{
+    margin-bottom: 2rem;
 }
 
 .sigle{
@@ -38,8 +36,6 @@ body{
 .sigle span{
     color: #CCC;
 }
-
-
 
 .menu {
     display: none;
@@ -63,13 +59,13 @@ body{
     top: -1000px;
 }
 
-/*
-.menu-checkbox:focus + .menu-toggle {
-	outline: #00A1A1 auto 5px;
-}*/
 
-.menu-toggle {
-    padding: 2em 1em;
+.menu-checkbox:focus + .menu-burger {
+    display: none;
+}
+
+.menu-burger {
+
 }
 
 .nav-wrapper {
@@ -77,6 +73,7 @@ body{
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    padding: 2em 1em;
 }
 
 .menu a{
@@ -86,7 +83,19 @@ body{
 
 /* fin menu burger */
 
+h1{
+    font-family: 'ModernSans-Light';
+    font-size: 2rem;
+    position: relative;
+    bottom:110px;
+}
 
+.atelier{
+    background-image: url('../img/atelier.webp');
+    max-width: 800px;
+    padding: 5vh 10vw;
+    text-align: center;
+}
 
 /* diaporama */
 
@@ -134,7 +143,12 @@ footer{
         margin: 50px auto;
     }
 
-
+    h1{
+        font-family: 'ModernSans-Light';
+        font-size: 2rem;
+        position: relative;
+        bottom:120px;
+    }
 
     /* diaporama */
 
@@ -147,7 +161,7 @@ footer{
 
 
 
-/*  -----------------  pour les écrans moyens de 1200px ordinateur  -------------*/
+/*  -----------------  pour les écrans ordinateur de 1200px -------------*/
 /* -------------------------------------------------------------------------------*/
 @media screen and (min-width: 1200px) {
 
@@ -155,7 +169,7 @@ footer{
         width: 80%;
     }
 
-    .menu-toggle,
+    .menu-burger,
     .menu-checkbox {
         display: none;
     }

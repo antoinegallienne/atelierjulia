@@ -29,8 +29,6 @@ body{
 	color: #578D2E;
 	margin:0.5em 0.5em 0 0.5em ;
 }
-
-
 .sigle span{
 	color: #555;
 }
@@ -43,7 +41,9 @@ body{
 	list-style: none;
 	text-decoration: none;
 }
-
+.fa-times{ /* croix */
+	display: none;
+}
 .nav-wrapper a{
 	text-decoration: none;
 	color: #578D2E;
@@ -51,6 +51,7 @@ body{
 
 .menu-checkbox:checked ~ .menu {
 	display: block;
+
 }
 
 .menu-checkbox {
@@ -59,12 +60,11 @@ body{
 	top: -1000px;
 }
 
-/*
-.menu-checkbox:focus + .menu-toggle {
-	outline: #00A1A1 auto 5px;
-}*/
+.menu-checkbox:focus + .menu-burger {
+	display: none;
+}
 
-.menu-toggle {
+.menu-burger {
 	padding: 2vh 3vw 0 0;
 }
 
@@ -81,7 +81,6 @@ body{
 }
 
 /* fin menu burger */
-
 
 
 /* diaporama */
@@ -113,6 +112,7 @@ body{
 	100%{background-image: url("../img/img1.webp");}
 }
 /* fin diaporama */
+
 /*     galerie */
 .galerie {
 	display: flex;
@@ -176,14 +176,7 @@ footer{
 		margin: 50px auto;
 	}
 
-	.galerie:hover img {
-		filter: blur(1px) brightness(.8) grayscale(.7);
-		transform: scale(.9);
-	}
-	.galerie img:hover {
-		filter: blur(0);
-		transform: scale(1.1);
-	}
+
 	.galerie {
 		display: flex;
 		flex-direction: row;
@@ -195,16 +188,16 @@ footer{
 
 
 
-/*  -----------------  pour les écrans moyens de 1200px ordinateur  -------------*/
+/*  -----------------  pour les écrans ordinateur de 1200px   -------------*/
 /* -------------------------------------------------------------------------------*/
 
 @media screen and (min-width: 1200px) {
 
 	body{
-		width: 80%;
+		width: 70%;
 	}
 
-	.menu-toggle,
+	.menu-burger,
 	.menu-checkbox {
 		display: none;
 	}
@@ -234,12 +227,21 @@ footer{
 		max-width: 800px;
 		margin: 50px auto;
 	}
+
 	.galerie {
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
 		justify-content: flex-start;
 		margin: auto;
+	}
+	.galerie:hover img {
+		filter: blur(1px) brightness(.8) grayscale(.7);
+		transform: scale(.9);
+	}
+	.galerie img:hover {
+		filter: blur(0);
+		transform: scale(1.1);
 	}
 }
 

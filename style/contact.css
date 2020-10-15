@@ -59,12 +59,11 @@ body{
     top: -1000px;
 }
 
-/*
-.menu-checkbox:focus + .menu-toggle {
-	outline: #00A1A1 auto 5px;
-}*/
+.menu-checkbox:focus + .menu-burger {
+    display: none;
+}
 
-.menu-toggle {
+.menu-burger {
     padding: 2vh 3vw 0 0;
 }
 
@@ -86,6 +85,16 @@ address {
     margin-left: 1rem;
 }
 
+.contact {
+    display: flex;
+    flex-direction: column;
+}
+.carte{
+    width: 350px;
+    height: 250px;
+    margin: 3vh 0 1vh 5vw;
+}
+
 footer{
     border-top: solid #555 1px ;
     text-align: center;
@@ -97,6 +106,16 @@ footer{
 
 @media screen and (min-width: 768px) {
 
+    .contact {
+        display: flex;
+        flex-direction: row;
+    }
+    .carte{
+        width: 400px;
+        height: 250px;
+        margin: 10vh 0 0 10vw;
+    }
+
 
 
 
@@ -104,7 +123,7 @@ footer{
 
 
 
-/*  -----------------  pour les écrans moyens de 1200px ordinateur  -------------*/
+/*  -----------------  pour les écrans ordinateur de 1200px   -------------*/
 /* -------------------------------------------------------------------------------*/
 
 @media screen and (min-width: 1200px) {
@@ -113,7 +132,7 @@ footer{
         width: 80%;
     }
 
-    .menu-toggle,
+    .menu-burger,
     .menu-checkbox {
         display: none;
     }
@@ -137,6 +156,11 @@ footer{
         margin: auto;
     }
 
+    .carte{
+        width: 550px;
+        height: 350px;
+        margin: 3vh 0 1vh 10vw;
+    }
 
 }
 
