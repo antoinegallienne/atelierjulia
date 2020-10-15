@@ -23,24 +23,30 @@ body{
 	background-color: #AAA;
 }
 
-/* menu burger */
-h1{
+.sigle{
 	font-family: 'ModernSans-Light';
 	font-size: 2em;
 	color: #578D2E;
-	margin:0 0.5em ;
+	margin:0.5em 0.5em 0 0.5em ;
 }
-h1 span{
-	color: #CCC;
+
+
+.sigle span{
+	color: #555;
 }
+
+/* menu burger */
+
 .menu {
 	display: none;
 	flex-basis: 100%;
 	list-style: none;
 	text-decoration: none;
 }
+
 .nav-wrapper a{
 	text-decoration: none;
+	color: #578D2E;
 }
 
 .menu-checkbox:checked ~ .menu {
@@ -53,12 +59,13 @@ h1 span{
 	top: -1000px;
 }
 
+/*
 .menu-checkbox:focus + .menu-toggle {
 	outline: #00A1A1 auto 5px;
-}
+}*/
 
 .menu-toggle {
-	padding: 2em 1em;
+	padding: 2vh 3vw 0 0;
 }
 
 .nav-wrapper {
@@ -75,9 +82,7 @@ h1 span{
 
 /* fin menu burger */
 
-nav{
 
-}
 
 /* diaporama */
 
@@ -130,6 +135,9 @@ nav{
 	object-fit: cover;
 	transition: transform .2s;
 }
+
+/*
+
 .galerie:hover img {
 	filter: blur(1px) brightness(.8) grayscale(.7);
 	transform: scale(.9);
@@ -138,7 +146,15 @@ nav{
 	filter: blur(0);
 	transform: scale(1.1);
 }
+ */
 /* fin galerie */
+
+.fa-angle-left,
+.fa-angle-right,
+.fa-grip-horizontal{
+	font-size: 40px;
+	margin-left: 10px;
+}
 
 footer{
 	border-top: solid #555 1px ;
@@ -151,29 +167,7 @@ footer{
 
 @media screen and (min-width: 768px) {
 
-	.menu-toggle,
-	.menu-checkbox {
-		display: none;
-	}
 
-	.menu {
-		display: block;
-		flex-basis: auto;
-		margin: 1em;
-		padding: 0;
-	}
-	.menu li {
-		display: inline-block;
-		margin: 1em;
-	}
-	.nav-wrapper {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		flex-wrap: nowrap;
-		width: 90%;
-		margin: auto;
-	}
 
 	/* diaporama */
 
@@ -182,6 +176,21 @@ footer{
 		margin: 50px auto;
 	}
 
+	.galerie:hover img {
+		filter: blur(1px) brightness(.8) grayscale(.7);
+		transform: scale(.9);
+	}
+	.galerie img:hover {
+		filter: blur(0);
+		transform: scale(1.1);
+	}
+	.galerie {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		margin: auto;
+	}
 }
 
 
@@ -225,5 +234,12 @@ footer{
 		max-width: 800px;
 		margin: 50px auto;
 	}
-
+	.galerie {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		margin: auto;
+	}
 }
+

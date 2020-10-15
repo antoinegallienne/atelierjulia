@@ -1,3 +1,4 @@
+
 @font-face {
     font-family: 'ModernSans-Light';
     src: url('../font/ModernSans-Light.otf') format('opentype'),
@@ -21,25 +22,20 @@ body{
     margin: auto;
     background-color: #AAA;
 }
-.atelier{
-    background-image: url('../img/atelier.webp');
-    max-width: 800px;
-    padding: 5vh 10vw;
-    text-align: center;
-}
 
 .sigle{
     font-family: 'ModernSans-Light';
     font-size: 2em;
     color: #578D2E;
-    margin:0 0.5em ;
+    margin:0.5em 0.5em 0 0.5em ;
 }
+
 
 .sigle span{
-    color: #CCC;
+    color: #555;
 }
 
-
+/* menu burger */
 
 .menu {
     display: none;
@@ -69,7 +65,7 @@ body{
 }*/
 
 .menu-toggle {
-    padding: 2em 1em;
+    padding: 2vh 3vw 0 0;
 }
 
 .nav-wrapper {
@@ -86,37 +82,9 @@ body{
 
 /* fin menu burger */
 
-
-
-/* diaporama */
-
-.conteneur{
-    max-width: 350px;
-    margin: 50px auto;
-    border: solid black 3px;
+address {
+    margin-left: 1rem;
 }
-
-.diaporama{
-    width: 100%;
-    height: 0;
-    padding-top: 75%;
-    background-color: #ededed;
-    background-size: contain;
-    animation: accueil 15s ease-in-out infinite both;
-}
-
-.diaporama:hover{
-    animation-play-state: paused;
-}
-
-@keyframes accueil {
-    0%{background-image: url("../img/atelier01.webp");}
-    25%{background-image: url("../img/atelier02.webp");}
-    50%{background-image: url("../img/atelier03.webp");}
-    75%{background-image: url("../img/atelier04.webp");}
-    100%{background-image: url("../img/atelier05.webp");}
-}
-/* fin diaporama */
 
 footer{
     border-top: solid #555 1px ;
@@ -129,19 +97,8 @@ footer{
 
 @media screen and (min-width: 768px) {
 
-    .atelier{
-        max-width: 800px;
-        margin: 50px auto;
-    }
 
 
-
-    /* diaporama */
-
-    .conteneur{
-        max-width: 500px;
-        margin: 50px auto;
-    }
 
 }
 
@@ -149,6 +106,7 @@ footer{
 
 /*  -----------------  pour les écrans moyens de 1200px ordinateur  -------------*/
 /* -------------------------------------------------------------------------------*/
+
 @media screen and (min-width: 1200px) {
 
     body{
@@ -179,17 +137,6 @@ footer{
         margin: auto;
     }
 
-    /* diaporama */
 
-    .conteneur{
-        max-width: 800px;
-        margin: 50px auto;
-    }
-    .galerie {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        margin: auto;
-    }
 }
+
