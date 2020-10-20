@@ -79,6 +79,12 @@ body{
 	color: #578D2E;
 	font-size: 1.1rem;
 }
+/* --------------------------*/
+
+a:hover{
+	color: #DDD;
+}
+
 
 /* fin menu burger */
 

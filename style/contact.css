@@ -79,6 +79,11 @@ body{
     font-size: 1.1rem;
 }
 
+/* --------------------------*/
+
+a:hover{
+    color: #DDD;
+}
 /* fin menu burger */
 
 address {
