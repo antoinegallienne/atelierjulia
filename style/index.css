@@ -29,6 +29,7 @@ body{
 	color: #578D2E;
 	margin:0.5em 0.5em 0 0.5em ;
 }
+
 .sigle span{
 	color: #555;
 }
@@ -41,9 +42,11 @@ body{
 	list-style: none;
 	text-decoration: none;
 }
+
 .fa-times{ /* croix */
 	display: none;
 }
+
 .nav-wrapper a{
 	text-decoration: none;
 	color: #578D2E;
@@ -78,11 +81,14 @@ body{
 .menu a{
 	color: #578D2E;
 	font-size: 1.1rem;
+	transition-property: color;
+	transition-duration: 0.5s;
 }
 /* --------------------------*/
 
 a:hover{
 	color: #DDD;
+
 }
 
 
@@ -142,25 +148,21 @@ a:hover{
 	transition: transform .2s;
 }
 
-/*
-
-.galerie:hover img {
-	filter: blur(1px) brightness(.8) grayscale(.7);
-	transform: scale(.9);
-}
-.galerie img:hover {
-	filter: blur(0);
-	transform: scale(1.1);
-}
- */
-/* fin galerie */
-
 .fa-angle-left,
 .fa-angle-right,
 .fa-grip-horizontal{
 	font-size: 40px;
 	margin-left: 10px;
+	color: black;
+	transition-property: color;
+	transition-duration: 0.5s;
 }
+
+.fa-angle-left:hover,
+.fa-angle-right:hover {
+	color: #DDD;
+}
+/* fin galerie */
 
 footer{
 	border-top: solid #555 1px ;
