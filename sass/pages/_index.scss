@@ -1,37 +1,21 @@
 
-@font-face {
-	font-family: 'ModernSans-Light';
-	src: url('../font/ModernSans-Light.otf') format('opentype'),
-	url('../font/ModernSans-Light.otf') format('opentype');
-	font-weight: normal;
-	font-style: normal;
-}
-@font-face {
-	font-family: 'Louis George Cafe';
-	src: url('../font/Louis George Cafe.ttf') format('truetype'),
-	url('../font/Louis George Cafe Bold.ttf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
-}
-
-
 body{
 	min-width: 460px;
 	max-width: 100%;
 	height: 100%;
 	margin: auto;
-	background-color: #AAA;
+	background-color: $font;
 }
 
 .sigle{
 	font-family: 'ModernSans-Light';
 	font-size: 2em;
-	color: #578D2E;
+	color: $menu;
 	margin:0.5em 0.5em 0 0.5em ;
 }
 
 .sigle span{
-	color: #555;
+	color: $menug;
 }
 
 /* menu burger */
@@ -49,7 +33,7 @@ body{
 
 .nav-wrapper a{
 	text-decoration: none;
-	color: #578D2E;
+	color: $menu;
 }
 
 .menu-checkbox:checked ~ .menu {
@@ -79,7 +63,7 @@ body{
 }
 
 .menu a{
-	color: #578D2E;
+	color: $menu;
 	font-size: 1.1rem;
 	transition-property: color;
 	transition-duration: 0.5s;
@@ -87,7 +71,7 @@ body{
 /* --------------------------*/
 
 a:hover{
-	color: #DDD;
+	color: $menuhover;
 
 }
 
@@ -102,7 +86,7 @@ a:hover{
 	margin: 50px auto;
 }
 
-.diaporama{
+.diaporama-accueil{
 	width: 100%;
 	height: 0;
 	padding-top: 75%;
@@ -116,13 +100,6 @@ a:hover{
 	animation-play-state: paused;
 }
 
-@keyframes accueil {
-	0%{background-image: url("../img/img1.webp");}
-	25%{background-image: url("../img/img2.webp");}
-	50%{background-image: url("../img/img3.webp");}
-	75%{background-image: url("../img/img4.webp");}
-	100%{background-image: url("../img/img1.webp");}
-}
 /* fin diaporama */
 
 /*     galerie */

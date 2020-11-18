@@ -1,0 +1,21 @@
+// ----  animation page accueil   ---
+//-----------------------------------
+
+@keyframes accueil {
+0%{background-image: url("../img/img1.webp");}
+25%{background-image: url("../img/img2.webp");}
+50%{background-image: url("../img/img3.webp");}
+75%{background-image: url("../img/img4.webp");}
+100%{background-image: url("../img/img1.webp");}
+}
+
+// ----  animation page atelier   ---
+//-----------------------------------
+
+@keyframes atelier {
+0%{background-image: url("../img/atelier01.webp");}
+25%{background-image: url("../img/atelier02.webp");}
+50%{background-image: url("../img/atelier03.webp");}
+75%{background-image: url("../img/atelier04.webp");}
+100%{background-image: url("../img/atelier05.webp");}
+}

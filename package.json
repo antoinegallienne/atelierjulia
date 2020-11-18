@@ -1,0 +1,19 @@
+{
+  "name": "atelierjuliasass",
+  "version": "1.0.0",
+  "description": "site Atelier Julia",
+  "main": "index.html",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./public/style/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/antoinegallienne/atelierjulia.git"
+  },
+  "author": "Antoine Gallienne",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/antoinegallienne/atelierjulia/issues"
+  },
+  "homepage": "https://github.com/antoinegallienne/atelierjulia#readme"
+}

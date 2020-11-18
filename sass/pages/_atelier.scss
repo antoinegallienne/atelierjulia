@@ -1,85 +1,9 @@
-@font-face {
-    font-family: 'ModernSans-Light';
-    src: url('../font/ModernSans-Light.otf') format('opentype'),
-    url('../font/ModernSans-Light.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Louis George Cafe';
-    src: url('../font/Louis George Cafe.ttf') format('truetype'),
-    url('../font/Louis George Cafe Bold.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-
-body{
-    min-width: 460px;
-    max-width: 100%;
-    height: 100%;
-    margin: auto;
-    background-color: #AAA;
-}
 
 .main-navigation{
     margin-bottom: 2rem;
 }
 
-.sigle{
-    font-family: 'ModernSans-Light';
-    font-size: 2em;
-    color: #578D2E;
-    margin:0 0.5em ;
-}
 
-.sigle span{
-    color: #CCC;
-}
-
-.menu {
-    display: none;
-    flex-basis: 100%;
-    list-style: none;
-    text-decoration: none;
-}
-
-.nav-wrapper a{
-    text-decoration: none;
-    color: #578D2E;
-}
-
-.menu-checkbox:checked ~ .menu {
-    display: block;
-}
-
-.menu-checkbox {
-    opacity: 0;
-    position: absolute;
-    top: -1000px;
-}
-
-
-.menu-checkbox:focus + .menu-burger {
-    display: none;
-}
-
-.menu-burger {
-
-}
-
-.nav-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding: 2em 1em;
-}
-
-.menu a{
-    color: #578D2E;
-    font-size: 1.1rem;
-}
 
 /* fin menu burger */
 
@@ -91,7 +15,7 @@ h1{
 }
 
 .atelier{
-    background-image: url('../img/atelier.webp');
+    background-image: url('..public/img/atelier.webp');
     max-width: 800px;
     padding: 5vh 10vw;
     text-align: center;
@@ -105,26 +29,19 @@ h1{
     border: solid black 3px;
 }
 
-.diaporama{
+.diaporama-atelier{
     width: 100%;
     height: 0;
     padding-top: 75%;
     background-color: #ededed;
     background-size: contain;
-    animation: accueil 15s ease-in-out infinite both;
+    animation: atelier 15s ease-in-out infinite both;
 }
 
 .diaporama:hover{
     animation-play-state: paused;
 }
 
-@keyframes accueil {
-    0%{background-image: url("../img/atelier01.webp");}
-    25%{background-image: url("../img/atelier02.webp");}
-    50%{background-image: url("../img/atelier03.webp");}
-    75%{background-image: url("../img/atelier04.webp");}
-    100%{background-image: url("../img/atelier05.webp");}
-}
 /* fin diaporama */
 
 footer{

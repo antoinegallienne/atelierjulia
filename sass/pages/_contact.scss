@@ -1,89 +1,9 @@
 
-@font-face {
-    font-family: 'ModernSans-Light';
-    src: url('../font/ModernSans-Light.otf') format('opentype'),
-    url('../font/ModernSans-Light.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Louis George Cafe';
-    src: url('../font/Louis George Cafe.ttf') format('truetype'),
-    url('../font/Louis George Cafe Bold.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-
-body{
-    min-width: 460px;
-    max-width: 100%;
-    height: 100%;
-    margin: auto;
-    background-color: #AAA;
-}
-
-.sigle{
-    font-family: 'ModernSans-Light';
-    font-size: 2em;
-    color: #578D2E;
-    margin:0.5em 0.5em 0 0.5em ;
-}
-
-
-.sigle span{
-    color: #555;
-}
 
 /* menu burger */
 
-.menu {
-    display: none;
-    flex-basis: 100%;
-    list-style: none;
-    text-decoration: none;
-}
-
-.nav-wrapper a{
-    text-decoration: none;
-    color: #578D2E;
-}
-
-.menu-checkbox:checked ~ .menu {
-    display: block;
-}
-
-.menu-checkbox {
-    opacity: 0;
-    position: absolute;
-    top: -1000px;
-}
-
-.menu-checkbox:focus + .menu-burger {
-    display: none;
-}
-
-.menu-burger {
-    padding: 2vh 3vw 0 0;
-}
-
-.nav-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.menu a{
-    color: #578D2E;
-    font-size: 1.1rem;
-}
-
 /* --------------------------*/
 
-a:hover{
-    color: #DDD;
-}
 /* fin menu burger */
 
 address {
@@ -93,7 +13,6 @@ address {
 .page-contact {
     display: flex;
     flex-direction: column;
-    background-image: url('../img/contact.webp');
     max-width: 1100px;
     padding: 3vh 0;
     text-align: center;
@@ -125,7 +44,6 @@ footer{
     .page-contact {
         display: flex;
         flex-direction: row;
-        background-image: url('../img/contact.webp');
         max-width: 1100px;
         text-align: center;
     }
