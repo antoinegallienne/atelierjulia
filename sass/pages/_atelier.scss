@@ -1,23 +1,21 @@
 
+
 .main-navigation{
     margin-bottom: 2rem;
 }
 
 
-
-/* fin menu burger */
-
 h1{
     font-family: 'ModernSans-Light';
     font-size: 2rem;
     position: relative;
-    bottom:110px;
+    bottom:1px;
+    margin: 0;
 }
 
 .atelier{
     background-image: url('..public/img/atelier.webp');
     max-width: 800px;
-    padding: 5vh 10vw;
     text-align: center;
 }
 
@@ -25,7 +23,7 @@ h1{
 
 .conteneur{
     max-width: 350px;
-    margin: 50px auto;
+    margin: 1px auto;
     border: solid black 3px;
 }
 
@@ -38,8 +36,9 @@ h1{
     animation: atelier 15s ease-in-out infinite both;
 }
 
-.diaporama:hover{
+.diaporama-atelier:hover{
     animation-play-state: paused;
+    cursor: wait;
 }
 
 /* fin diaporama */
@@ -49,78 +48,80 @@ footer{
     text-align: center;
     margin-top: auto;
 }
-
-/*  -----------------  pour les écrans moyens de 768px tablette  -------------*/
-/* -------------------------------------------------------------------------------*/
-
-@media screen and (min-width: 768px) {
-
-    .atelier{
-        max-width: 800px;
-        margin: 50px auto;
-    }
-
-    h1{
-        font-family: 'ModernSans-Light';
-        font-size: 2rem;
-        position: relative;
-        bottom:120px;
-    }
-
-    /* diaporama */
-
-    .conteneur{
-        max-width: 500px;
-        margin: 50px auto;
-    }
-
+p footer{
+    margin-top: 10px;
 }
 
+/* -----            media query        ----*/
+// ------------------------------------------
 
+body {
 
-/*  -----------------  pour les écrans ordinateur de 1200px -------------*/
-/* -------------------------------------------------------------------------------*/
-@media screen and (min-width: 1200px) {
+    @include media-min(768px) {
 
-    body{
-        width: 80%;
+        .atelier {
+            max-width: 800px;
+            margin: 1px auto;
+        }
+
+        h1 {
+            font-family: 'ModernSans-Light';
+            font-size: 2rem;
+            position: relative;
+            bottom: 10px;
+        }
+
+        /* diaporama */
+
+        .conteneur {
+            max-width: 500px;
+            margin: 50px auto;
+        }
     }
 
-    .menu-burger,
-    .menu-checkbox {
-        display: none;
-    }
 
-    .menu {
-        display: block;
-        flex-basis: auto;
-        margin: 1em;
-        padding: 0;
-    }
-    .menu li {
-        display: inline-block;
-        margin: 1em;
-    }
-    .nav-wrapper {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-wrap: nowrap;
-        width: 80%;
-        margin: auto;
-    }
+    @include media-min(1024px) {
 
-    /* diaporama */
+        body {
+            width: 80%;
+        }
 
-    .conteneur{
-        max-width: 800px;
-        margin: 50px auto;
-    }
-    .galerie {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        margin: auto;
+        .menu-burger,
+        .menu-checkbox {
+            display: none;
+        }
+
+        .menu {
+            display: block;
+            flex-basis: auto;
+            margin: 1em;
+            padding: 0;
+        }
+        .menu li {
+            display: inline-block;
+            margin: 1em;
+        }
+        .nav-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: nowrap;
+            width: 80%;
+            margin: auto;
+        }
+
+        /* diaporama */
+
+        .conteneur {
+            max-width: 800px;
+            margin: 50px auto;
+        }
+        .galerie {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            margin: auto;
+        }
     }
 }

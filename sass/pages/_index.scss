@@ -96,8 +96,9 @@ a:hover{
 	animation: accueil 15s ease-in-out infinite both;
 }
 
-.diaporama:hover{
+.diaporama-accueil:hover{
 	animation-play-state: paused;
+	cursor: wait;
 }
 
 /* fin diaporama */
@@ -141,92 +142,83 @@ a:hover{
 }
 /* fin galerie */
 
-footer{
-	border-top: solid #555 1px ;
-	text-align: center;
-	margin-top: auto;
+
+/* -----            media query        ----*/
+// ------------------------------------------
+
+body {
+	@include media-min(768px) {
+
+		/* diaporama */
+
+		.conteneur {
+			max-width: 800px;
+			margin: 50px auto;
+		}
+
+
+		.galerie {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: flex-start;
+			margin: auto;
+		}
+	}
+
+
+	@include media-min(1024px) {
+
+		body {
+			width: 70%;
+		}
+
+		.menu-burger,
+		.menu-checkbox {
+			display: none;
+		}
+
+		.menu {
+			display: block;
+			flex-basis: auto;
+			margin: 1em;
+			padding: 0;
+		}
+		.menu li {
+			display: inline-block;
+			margin: 1em;
+		}
+		.nav-wrapper {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			flex-wrap: nowrap;
+			width: 80%;
+			margin: auto;
+		}
+
+		/* diaporama */
+
+		.conteneur {
+			max-width: 800px;
+			margin: 50px auto;
+		}
+
+		.galerie {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: flex-start;
+			margin: auto;
+		}
+		.galerie:hover img {
+			filter: blur(1px) brightness(.8) grayscale(.7);
+			transform: scale(.9);
+		}
+		.galerie img:hover {
+			filter: blur(0);
+			transform: scale(1.1);
+		}
+	}
+
 }
-
-/*  -----------------  pour les écrans moyens de 768px tablette  -------------*/
-/* -------------------------------------------------------------------------------*/
-
-@media screen and (min-width: 768px) {
-
-
-
-	/* diaporama */
-
-	.conteneur{
-		max-width: 800px;
-		margin: 50px auto;
-	}
-
-
-	.galerie {
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		justify-content: flex-start;
-		margin: auto;
-	}
-}
-
-
-
-/*  -----------------  pour les écrans ordinateur de 1200px   -------------*/
-/* -------------------------------------------------------------------------------*/
-
-@media screen and (min-width: 1200px) {
-
-	body{
-		width: 70%;
-	}
-
-	.menu-burger,
-	.menu-checkbox {
-		display: none;
-	}
-
-	.menu {
-		display: block;
-		flex-basis: auto;
-		margin: 1em;
-		padding: 0;
-	}
-	.menu li {
-		display: inline-block;
-		margin: 1em;
-	}
-	.nav-wrapper {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		flex-wrap: nowrap;
-		width: 80%;
-		margin: auto;
-	}
-
-	/* diaporama */
-
-	.conteneur{
-		max-width: 800px;
-		margin: 50px auto;
-	}
-
-	.galerie {
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		justify-content: flex-start;
-		margin: auto;
-	}
-	.galerie:hover img {
-		filter: blur(1px) brightness(.8) grayscale(.7);
-		transform: scale(.9);
-	}
-	.galerie img:hover {
-		filter: blur(0);
-		transform: scale(1.1);
-	}
-}
-
