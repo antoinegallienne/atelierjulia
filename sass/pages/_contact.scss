@@ -8,7 +8,7 @@
 }
 
 .contact{
-    border: solid black 2px;
+    border: solid $border 2px;
     background-color: rgba(255,255,255,0.2);
     padding: 5vh 1vw;
     margin: 3vh 0 1vh 5vw;
@@ -20,6 +20,11 @@
     height: 250px;
     margin: 3vh 0 1vh 5vw;
 }
+/*
+.affiche{
+    width: 250px;
+    height: 350px;
+}*/
 
 /* -----            media query        ----*/
 // ------------------------------------------
@@ -33,13 +38,11 @@ body {
             flex-direction: row;
             max-width: 1100px;
             text-align: center;
-            margin: auto;
         }
 
         .contact {
             display: flex;
             flex-direction: column;
-            border: solid black 2px;
             background-color: rgba(255, 255, 255, 0.3);
             margin-left: 20px;
         }
@@ -53,10 +56,6 @@ body {
     }
 
     @include media-min(1024px) {
-
-        body {
-            width: 80%;
-        }
 
         .menu-burger,
         .menu-checkbox {
@@ -90,7 +89,6 @@ body {
         .contact {
             display: flex;
             flex-direction: column;
-            border: solid black 2px;
             margin-left: 20px;
         }
 
